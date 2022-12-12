@@ -3,7 +3,12 @@ const { Schema } = mongoose;
 
   const mascotaSchema = new Schema({
     name: String,
-    description: String
+    description: String,
+    raza:  {
+      pais: String,
+      origen: String,
+      uso: String,
+    },
   });
 
   const Mascota = mongoose.model('Mascota', mascotaSchema);

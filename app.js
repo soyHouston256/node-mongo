@@ -23,3 +23,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+//jalar un modelo de mongodb con nodejs
+app.get('/mascotas', async (req, res) => {
+  const mascotas = await Mascota.find()
+  res.json(mascotas)
+})
